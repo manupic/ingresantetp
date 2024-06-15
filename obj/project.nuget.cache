@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "y1a7Iiv/35b3tzJGIJM0meo014W/RP86LL+09BOsNTUVyiEVq/JpB1RzRfMH5UXFhInt9S56VSsmc0FtroaKuQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\PracticaForm.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Emanuel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Emanuel\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Emanuel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\Emanuel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
