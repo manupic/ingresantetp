@@ -8,13 +8,13 @@ namespace PracticaForm
 {
     public class Ingresante
     {
-        public string nombre;
-        public string direccion;
-        public int edad;
-        public string cuit;
-        public string genero;
-        public string pais;
-        public string[] curso;
+        private string nombre;
+        private string direccion;
+        private int edad;
+        private string cuit;
+        private string genero;
+        private string pais;
+        private string[] curso;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Direccion { get => direccion; set => direccion = value; }
