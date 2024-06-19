@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PracticaForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f97257ba46c77065c826a72990ee5d6770724015")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8d7c576248579964d28abbfed7de7d236e15692")]
 [assembly: System.Reflection.AssemblyProductAttribute("PracticaForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PracticaForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

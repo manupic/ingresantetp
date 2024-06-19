@@ -33,7 +33,11 @@
             rbJs = new RadioButton();
             btn_exportar = new Button();
             groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            rbJson = new RadioButton();
+            rbXml = new RadioButton();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // rbC
@@ -84,18 +88,52 @@
             groupBox1.Controls.Add(rbC);
             groupBox1.Controls.Add(rbCplus);
             groupBox1.Controls.Add(rbJs);
-            groupBox1.Location = new Point(146, 98);
+            groupBox1.Location = new Point(135, 30);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(200, 100);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cursos";
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(rbJson);
+            groupBox2.Controls.Add(rbXml);
+            groupBox2.Location = new Point(135, 158);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(200, 78);
+            groupBox2.TabIndex = 5;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Tipo";
+            // 
+            // rbJson
+            // 
+            rbJson.AutoSize = true;
+            rbJson.Location = new Point(14, 22);
+            rbJson.Name = "rbJson";
+            rbJson.Size = new Size(53, 19);
+            rbJson.TabIndex = 0;
+            rbJson.TabStop = true;
+            rbJson.Text = "JSON";
+            rbJson.UseVisualStyleBackColor = true;
+            // 
+            // rbXml
+            // 
+            rbXml.AutoSize = true;
+            rbXml.Location = new Point(14, 47);
+            rbXml.Name = "rbXml";
+            rbXml.Size = new Size(49, 19);
+            rbXml.TabIndex = 1;
+            rbXml.TabStop = true;
+            rbXml.Text = "XML";
+            rbXml.UseVisualStyleBackColor = true;
+            // 
             // FormExportacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(481, 368);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(btn_exportar);
             Name = "FormExportacion";
@@ -103,6 +141,8 @@
             WindowState = FormWindowState.Maximized;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -113,5 +153,8 @@
         private RadioButton rbJs;
         private Button btn_exportar;
         private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private RadioButton rbJson;
+        private RadioButton rbXml;
     }
 }

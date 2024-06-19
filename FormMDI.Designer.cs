@@ -34,7 +34,6 @@
             modificarEliminarRegistroToolStripMenuItem = new ToolStripMenuItem();
             exportacionesToolStripMenuItem = new ToolStripMenuItem();
             exportarXMLToolStripMenuItem = new ToolStripMenuItem();
-            exportarJSONToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,7 +68,7 @@
             // 
             // exportacionesToolStripMenuItem
             // 
-            exportacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportarXMLToolStripMenuItem, exportarJSONToolStripMenuItem });
+            exportacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportarXMLToolStripMenuItem });
             exportacionesToolStripMenuItem.Name = "exportacionesToolStripMenuItem";
             exportacionesToolStripMenuItem.Size = new Size(93, 20);
             exportacionesToolStripMenuItem.Text = "Exportaciones";
@@ -78,14 +77,8 @@
             // 
             exportarXMLToolStripMenuItem.Name = "exportarXMLToolStripMenuItem";
             exportarXMLToolStripMenuItem.Size = new Size(180, 22);
-            exportarXMLToolStripMenuItem.Text = "Exportar XML";
+            exportarXMLToolStripMenuItem.Text = "Exportar XML/JSON";
             exportarXMLToolStripMenuItem.Click += exportarXMLToolStripMenuItem_Click;
-            // 
-            // exportarJSONToolStripMenuItem
-            // 
-            exportarJSONToolStripMenuItem.Name = "exportarJSONToolStripMenuItem";
-            exportarJSONToolStripMenuItem.Size = new Size(180, 22);
-            exportarJSONToolStripMenuItem.Text = "Exportar JSON";
             // 
             // FormMDI
             // 
@@ -112,6 +105,5 @@
         private ToolStripMenuItem modificarEliminarRegistroToolStripMenuItem;
         private ToolStripMenuItem exportacionesToolStripMenuItem;
         private ToolStripMenuItem exportarXMLToolStripMenuItem;
-        private ToolStripMenuItem exportarJSONToolStripMenuItem;
     }
 }

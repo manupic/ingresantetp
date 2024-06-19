@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
@@ -172,6 +173,35 @@ namespace PracticaForm
                 }
             }
                         
+        }
+
+        public void exportarInfoJSON()
+        {
+            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            string filePath = Path.Combine(downloadsPath, this.nombre + ".json");
+
+            StreamWriter streamWriter = null;
+
+
+            try
+            {
+                streamWriter = new StreamWriter(filePath, true);                
+
+                foreach (Ingresante ingresante in this.lista_ingresantes)
+                {
+                    string jsonString = JsonSerializer.Serialize(ingresante);                                        
+                    streamWriter.WriteLine(jsonString);
+                }
+            }
+            finally
+            {
+                if (streamWriter != null)
+                {
+                    streamWriter.Close();
+                    streamWriter.Dispose();
+                }
+            }
+
         }
 
     }

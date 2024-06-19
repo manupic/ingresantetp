@@ -23,17 +23,43 @@ namespace PracticaForm
             {
                 Curso curso_c = new Curso(rbC.Text.Trim());
                 curso_c.cargarInfo(this);
-                curso_c.exportarInfoXML();
+
+                if (rbJson.Checked)
+                {
+                    curso_c.exportarInfoJSON();
+                }
+                else if (rbXml.Checked)
+                {
+                    curso_c.exportarInfoXML();
+                }                
             }
             if (rbCplus.Checked)
             {
-                Curso curso_c = new Curso(rbCplus.Text.Trim());
-                Console.WriteLine("Exporto el del curso c ++");
+                Curso curso_cplus = new Curso(rbCplus.Text.Trim());
+                curso_cplus.cargarInfo(this);
+
+                if (rbJson.Checked)
+                {
+                    curso_cplus.exportarInfoJSON();
+                }
+                else if (rbXml.Checked)
+                {
+                    curso_cplus.exportarInfoXML();
+                }
             }
             if (rbJs.Checked)
             {
-                Curso curso_c = new Curso(rbJs.Text.Trim());
-                Console.WriteLine("Exporto el de JS");
+                Curso curso_js = new Curso(rbJs.Text.Trim());
+                curso_js.cargarInfo(this);
+
+                if (rbJson.Checked)
+                {
+                    curso_js.exportarInfoJSON();
+                }
+                else if (rbXml.Checked)
+                {
+                    curso_js.exportarInfoXML();
+                }
             }
         }
         
