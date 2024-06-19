@@ -24,7 +24,7 @@ namespace PracticaForm
             f.Text = "Form - " + this.MdiChildren.Length.ToString();
             f.Show();
 
-
+            
 
         }
     }

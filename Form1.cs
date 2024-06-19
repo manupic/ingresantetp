@@ -25,11 +25,12 @@ namespace PracticaForm
                 if (rbMasculino.Checked) genero = rbMasculino.Text.Trim();
                 if (rbNoBinario.Checked) genero = rbNoBinario.Text.Trim();
 
-                //Se inicializan los nombres de los cursos con stringBuilder
+                // Se inicializan los nombres de los cursos con stringBuilder
                 StringBuilder curso_c = new StringBuilder("");
                 StringBuilder curso_cplus = new StringBuilder("");
                 StringBuilder curso_js = new StringBuilder("");                
 
+                // El curso chequeado toma el nombre y lo asigna al StringBuilder de arriba
                 if (chkc.Checked)
                 {
                     curso_c.Append(chkc.Text.Trim()); 
@@ -45,6 +46,7 @@ namespace PracticaForm
                
                 string[] curso = new string[3];
 
+                // Controla que se haya seleccionado un curso
                 if (curso_c.Equals("") && curso_cplus.Equals("") && curso_js.Equals(""))
                 {
                     MessageBox.Show("Seleccione una opción para curso");
@@ -60,15 +62,12 @@ namespace PracticaForm
                     Ingresante ing = new Ingresante(nombre, direccion, edad, cuit, genero, pais, curso);
 
                     this.confirmarSubmit(ing);
-                }
-                                                               
-
+                }                                                    
             }
             else
             {
                 MessageBox.Show("Ingrese un Cuit Valido");
             }
-
         }
 
         internal void Vaciar()
@@ -88,31 +87,34 @@ namespace PracticaForm
 
         internal void confirmarSubmit(Ingresante ingresante)
         {
+            // Muesta la info del ingresante, la acepta o descarta
             if (Funciones.mConsulta(this, "Datos Ingresante \n" + ingresante.ToString()))
             {
+                // Muestra los cursos que se inscribio
                 if (MessageBox.Show(ingresante.ToStringCursos(), "Cursos Inscripto", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                    // Recorre los cursos del ingresante
                     foreach (string curso_str in ingresante.Curso)
                     {
-                        Curso curso = new Curso(curso_str);
-                        curso.cargarInfo();
-                        curso.agregarAlCurso(ingresante);
+                        if(curso_str != "")
+                        {
+                            Curso curso = new Curso(curso_str);
+                            //se inicializa el curso con los datos
+                            curso.cargarInfo(ingresante);                           
+                        }                        
                     }
                     //curso1.agregarAlCurso(ing);
                     this.Vaciar();
                 }
                 else
                 {
-                    MessageBox.Show("verifique los datos e intente nuevamente");
+                    MessageBox.Show("Verifique los datos e intente nuevamente");
                 }
-
             }
             else
             {
                 MessageBox.Show("Datos Descartados");
-
                 this.Vaciar();
-
             }
         }
 
