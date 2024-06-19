@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace PracticaForm
 {
-    internal class Ingresante
+    public class Ingresante
     {
-        string nombre;
-        string direccion;
-        int edad;
-        string cuit;
-        string genero;
-        string pais;
-        string[] curso;
+        public string nombre;
+        public string direccion;
+        public int edad;
+        public string cuit;
+        public string genero;
+        public string pais;
+        public string[] curso;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Direccion { get => direccion; set => direccion = value; }
@@ -23,6 +23,8 @@ namespace PracticaForm
         public string Pais { get => pais; set => pais = value; }
         public string[] Curso { get => curso; set => curso = value; }
         public string Cuit { get => cuit; set => cuit = value; }
+
+        public Ingresante() { }
 
         public Ingresante(string nombre, string direccion, int edad,string cuit, string genero, string pais, string[] curso)
         {
@@ -33,6 +35,16 @@ namespace PracticaForm
             this.Genero = genero;
             this.Curso = curso;
             this.Pais = pais;
+        }
+
+        public Ingresante(string nombre, string cuit, string genero, int edad, string pais, string direccion)
+        {
+            this.Nombre = nombre;
+            this.Cuit = cuit;
+            this.Genero = genero;
+            this.Edad = edad;
+            this.Pais = pais;
+            this.Direccion = direccion;
         }
 
         public override String ToString()

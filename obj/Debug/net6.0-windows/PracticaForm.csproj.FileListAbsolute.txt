@@ -33,3 +33,4 @@ C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windo
 C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windows\ref\PracticaForm.dll
 C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windows\PracticaForm.FormMDI.resources
 C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windows\PracticaForm.sourcelink.json
+C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windows\PracticaForm.FormExportacion.resources

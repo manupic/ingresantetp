@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace PracticaForm
 {
@@ -11,6 +12,7 @@ namespace PracticaForm
     {
         string nombre;
         ArrayList lista_ingresantes = new ArrayList();
+
 
         public Curso() { }
 
@@ -21,7 +23,7 @@ namespace PracticaForm
 
         public string Nombre { get => nombre; set => nombre = value; }
 
-        public void cargarInfo(Ingresante ingresante)
+        public void saveIngresante(Ingresante ingresante)
         {
             // Obtener la ruta de la carpeta Descargas del usuario
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
@@ -66,8 +68,7 @@ namespace PracticaForm
             if(lista_ingresantes.Length < 40)
             {            
                 // Inicializamos una variable booleana para indicar si el ingresante ya existe en el archivo
-                bool ingresanteExiste = false;
-                StringBuilder cursos_success = new StringBuilder();
+                bool ingresanteExiste = false;                
 
                 // Recorremos cada registro en el archivo
                 foreach (string registro in lista_ingresantes)
@@ -107,9 +108,7 @@ namespace PracticaForm
                             Console.Write(e.ToString());
                         }
                     }
-
-                    cursos_success.AppendLine(this.Nombre);
-                    MessageBox.Show("Se anoto con exito a: \n" + cursos_success.ToString());
+                    
                 }                
             }
             else
@@ -117,5 +116,63 @@ namespace PracticaForm
                 MessageBox.Show("Hay 40 o más registros para este curso");
             }
         }
+
+        public void cargarInfo(Form actual)
+        {
+            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            string filePath = Path.Combine(downloadsPath, this.nombre + ".txt");
+
+            // Verificar si el archivo existe
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    string[] ingresantes = File.ReadAllLines(filePath);
+
+                    foreach(string registro in ingresantes){
+                        string[] partes = registro.Split('|');
+                        Ingresante ingresante = new Ingresante(partes[0], partes[1], partes[2], Convert.ToInt32(partes[3]), partes[4], partes[5]);
+                        this.lista_ingresantes.Add(ingresante);
+                    }
+                }
+                catch (Exception ex) {
+                    Funciones.mError(actual, ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Archivo no encontrado");
+            }
+        }
+
+        public void exportarInfoXML()            
+        {
+            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            string filePath = Path.Combine(downloadsPath, this.nombre + ".xml");
+
+            StreamWriter streamWriter = null;
+
+            try
+            {
+                streamWriter = new StreamWriter(filePath);
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Ingresante));
+
+
+                foreach (Ingresante ingresante in this.lista_ingresantes)
+                {
+                    xmlSerializer.Serialize(streamWriter, ingresante);
+                }
+            }
+            finally
+            {
+                if(streamWriter != null)
+                {
+                    streamWriter.Close();
+                    streamWriter.Dispose();
+                }
+            }
+                        
+        }
+
     }
 }

@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\ingresante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:ingresante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|c:\\users\\emanuel\\desktop\\manu\\programacion 3\\practicaform\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|c:\\users\\emanuel\\desktop\\manu\\programacion 3\\practicaform\\formexportacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:formexportacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|c:\\users\\emanuel\\desktop\\manu\\programacion 3\\practicaform\\formexportacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:formexportacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\ingresante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:ingresante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\formmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:formmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\formmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:formmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F881A35-82A6-4484-97C1-B2AFBBDB8D19}|PracticaForm.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,45 +42,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "FormExportacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\FormExportacion.cs",
+              "RelativeDocumentMoniker": "FormExportacion.cs",
+              "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\FormExportacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormExportacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T22:57:10.722Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormExportacion.cs",
+              "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\FormExportacion.cs",
+              "RelativeDocumentMoniker": "FormExportacion.cs",
+              "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\FormExportacion.cs",
+              "RelativeToolTip": "FormExportacion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T22:06:24.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Curso.cs",
               "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Curso.cs",
               "RelativeDocumentMoniker": "Curso.cs",
               "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Curso.cs",
               "RelativeToolTip": "Curso.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAEwGMAAAAAAAAA",
+              "ViewState": "AQIAAI8AAAAAAAAAAADwv50AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T23:35:12.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T22:41:26.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "FormMDI.cs",
               "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\FormMDI.cs",
               "RelativeDocumentMoniker": "FormMDI.cs",
               "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\FormMDI.cs",
               "RelativeToolTip": "FormMDI.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAMAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAEwCAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T20:53:13.14Z"
+              "WhenOpened": "2024-06-08T20:53:13.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -95,35 +104,12 @@
               "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\FormMDI.cs [Dise\u00F1o]",
               "RelativeToolTip": "FormMDI.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T20:44:05.238Z"
+              "WhenOpened": "2024-06-08T20:44:05.238Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T20:32:28.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Funciones.cs",
-              "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Funciones.cs",
-              "RelativeDocumentMoniker": "Funciones.cs",
-              "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Funciones.cs",
-              "RelativeToolTip": "Funciones.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAAACgAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T22:50:28.957Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -135,28 +121,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAA7wGYAAAAsAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAnwCcAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T22:50:29.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Ingresante.cs",
               "DocumentMoniker": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Ingresante.cs",
               "RelativeDocumentMoniker": "Ingresante.cs",
               "ToolTip": "C:\\Users\\Emanuel\\Desktop\\Manu\\Programacion 3\\PracticaForm\\Ingresante.cs",
               "RelativeToolTip": "Ingresante.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAABGAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwAoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T22:50:29.691Z"
+              "WhenOpened": "2024-06-03T22:50:29.691Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -100,7 +100,7 @@ namespace PracticaForm
                         {
                             Curso curso = new Curso(curso_str);
                             //se inicializa el curso con los datos
-                            curso.cargarInfo(ingresante);                           
+                            curso.saveIngresante(ingresante);                           
                         }                        
                     }
                     //curso1.agregarAlCurso(ing);

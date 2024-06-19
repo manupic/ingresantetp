@@ -32,12 +32,15 @@
             inicioToolStripMenuItem = new ToolStripMenuItem();
             nuevoRegistroBtn = new ToolStripMenuItem();
             modificarEliminarRegistroToolStripMenuItem = new ToolStripMenuItem();
+            exportacionesToolStripMenuItem = new ToolStripMenuItem();
+            exportarXMLToolStripMenuItem = new ToolStripMenuItem();
+            exportarJSONToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, exportacionesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -64,6 +67,26 @@
             modificarEliminarRegistroToolStripMenuItem.Size = new Size(216, 22);
             modificarEliminarRegistroToolStripMenuItem.Text = "Modificar/Eliminar registro";
             // 
+            // exportacionesToolStripMenuItem
+            // 
+            exportacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exportarXMLToolStripMenuItem, exportarJSONToolStripMenuItem });
+            exportacionesToolStripMenuItem.Name = "exportacionesToolStripMenuItem";
+            exportacionesToolStripMenuItem.Size = new Size(93, 20);
+            exportacionesToolStripMenuItem.Text = "Exportaciones";
+            // 
+            // exportarXMLToolStripMenuItem
+            // 
+            exportarXMLToolStripMenuItem.Name = "exportarXMLToolStripMenuItem";
+            exportarXMLToolStripMenuItem.Size = new Size(180, 22);
+            exportarXMLToolStripMenuItem.Text = "Exportar XML";
+            exportarXMLToolStripMenuItem.Click += exportarXMLToolStripMenuItem_Click;
+            // 
+            // exportarJSONToolStripMenuItem
+            // 
+            exportarJSONToolStripMenuItem.Name = "exportarJSONToolStripMenuItem";
+            exportarJSONToolStripMenuItem.Size = new Size(180, 22);
+            exportarJSONToolStripMenuItem.Text = "Exportar JSON";
+            // 
             // FormMDI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -87,5 +110,8 @@
         private ToolStripMenuItem inicioToolStripMenuItem;
         private ToolStripMenuItem nuevoRegistroBtn;
         private ToolStripMenuItem modificarEliminarRegistroToolStripMenuItem;
+        private ToolStripMenuItem exportacionesToolStripMenuItem;
+        private ToolStripMenuItem exportarXMLToolStripMenuItem;
+        private ToolStripMenuItem exportarJSONToolStripMenuItem;
     }
 }
