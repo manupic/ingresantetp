@@ -49,7 +49,7 @@ namespace PracticaForm
                 // Controla que se haya seleccionado un curso
                 if (curso_c.Equals("") && curso_cplus.Equals("") && curso_js.Equals(""))
                 {
-                    MessageBox.Show("Seleccione una opción para curso");
+                    MessageBox.Show("Seleccione una opción para curso", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -59,14 +59,46 @@ namespace PracticaForm
 
                     string pais = lbPais.Text.Trim();
 
-                    Ingresante ing = new Ingresante(nombre, direccion, edad, cuit, genero, pais, curso);
+                    // Validaciones de los campos
+                    List<string> errores = new List<string>();
 
-                    this.confirmarSubmit(ing);
+                    if (string.IsNullOrEmpty(nombre))
+                    {
+                        errores.Add("Complete el nombre\n");
+                    }
+
+                    if (string.IsNullOrEmpty(direccion))
+                    {
+                        errores.Add("Complete la dirección\n");
+                    }
+
+                    if (string.IsNullOrEmpty(pais))
+                    {
+                        errores.Add("Seleccione un país\n");
+                    }
+
+                    if(!rbMasculino.Checked && !rbFemenino.Checked && !rbNoBinario.Checked)
+                    {
+                        errores.Add("Seleccione un género");
+                    }
+
+                    if (errores.Count == 0)
+                    {
+                        Ingresante ing = new Ingresante(nombre, direccion, edad, cuit, genero, pais, curso);
+                        this.confirmarSubmit(ing);
+                    }
+                    else
+                    {
+                        string mensajeError = string.Join("\n", errores);
+                        Funciones.mAdvertencia(this, mensajeError);
+                    }
+                    // FIN validaciones de los campos
                 }                                                    
             }
             else
             {
-                MessageBox.Show("Ingrese un Cuit Valido");
+                MessageBox.Show("Ingrese un Cuit Valido", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+  
             }
         }
 
@@ -88,10 +120,10 @@ namespace PracticaForm
         internal void confirmarSubmit(Ingresante ingresante)
         {
             // Muesta la info del ingresante, la acepta o descarta
-            if (Funciones.mConsulta(this, "Datos Ingresante \n" + ingresante.ToString()))
+            if (Funciones.mConsulta(this, "Confirme los datos del ingresante \n\n" + ingresante.ToString()))
             {
                 // Muestra los cursos que se inscribio
-                if (MessageBox.Show(ingresante.ToStringCursos(), "Cursos Inscripto", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show(ingresante.ToStringCursos(), "Cursos Inscripto", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     // Recorre los cursos del ingresante
                     foreach (string curso_str in ingresante.Curso)
@@ -100,20 +132,19 @@ namespace PracticaForm
                         {
                             Curso curso = new Curso(curso_str);
                             //se inicializa el curso con los datos
-                            curso.saveIngresante(ingresante);                           
+                            curso.guardarIngresanteEnTxt(ingresante);                           
                         }                        
                     }
-                    //curso1.agregarAlCurso(ing);
                     this.Vaciar();
                 }
                 else
                 {
-                    MessageBox.Show("Verifique los datos e intente nuevamente");
+                    MessageBox.Show("Verifique los datos e intente nuevamente", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Datos Descartados");
+                MessageBox.Show("Datos descartados", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Vaciar();
             }
         }

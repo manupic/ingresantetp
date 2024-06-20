@@ -19,49 +19,61 @@ namespace PracticaForm
 
         private void btn_exportar_Click(object sender, EventArgs e)
         {
+            Curso curso = null;
+
             if (rbC.Checked)
             {
-                Curso curso_c = new Curso(rbC.Text.Trim());
-                curso_c.cargarInfo(this);
+                curso = new Curso(rbC.Text.Trim());
+            }
+            else if (rbCplus.Checked)
+            {
+                curso = new Curso(rbCplus.Text.Trim());
+            }
+            else if (rbJs.Checked)
+            {
+                curso = new Curso(rbJs.Text.Trim());
+            }
 
-                if (rbJson.Checked)
+            if (curso != null)
+            {
+                try
                 {
-                    curso_c.exportarInfoJSON();
+                    curso.cargarInfoAlArrayIngresantes(this);
+
+                    if (rbJson.Checked)
+                    {
+                        curso.exportarInfoJSON();
+                        this.Vaciar();
+                    }
+                    else if (rbXml.Checked)
+                    {
+                        curso.exportarInfoXML();
+                        this.Vaciar();
+                    }
                 }
-                else if (rbXml.Checked)
-                {
-                    curso_c.exportarInfoXML();
+                catch (Exception ex) {
+                    MessageBox.Show("Error al exportar información: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }                
             }
-            if (rbCplus.Checked)
-            {
-                Curso curso_cplus = new Curso(rbCplus.Text.Trim());
-                curso_cplus.cargarInfo(this);
-
-                if (rbJson.Checked)
-                {
-                    curso_cplus.exportarInfoJSON();
-                }
-                else if (rbXml.Checked)
-                {
-                    curso_cplus.exportarInfoXML();
-                }
-            }
-            if (rbJs.Checked)
-            {
-                Curso curso_js = new Curso(rbJs.Text.Trim());
-                curso_js.cargarInfo(this);
-
-                if (rbJson.Checked)
-                {
-                    curso_js.exportarInfoJSON();
-                }
-                else if (rbXml.Checked)
-                {
-                    curso_js.exportarInfoXML();
-                }
-            }
         }
-        
+
+        private void rbJson_CheckedChanged(object sender, EventArgs e)
+        {
+            btn_exportar.Enabled = true;
+        }
+
+        private void rbXml_CheckedChanged(object sender, EventArgs e)
+        {
+            btn_exportar.Enabled = true;
+        }
+
+        internal void Vaciar()
+        {
+            rbC.Checked = false;
+            rbCplus.Checked = false;
+            rbJs.Checked = false;
+            rbJson.Checked = false;
+            rbXml.Checked = false;
+        }
     }
 }

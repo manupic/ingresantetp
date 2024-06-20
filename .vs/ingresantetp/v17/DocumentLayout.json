@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\flore\\Downloads\\ingresantetp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\flore\\Downloads\\ingresantetp\\FormExportacion.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FormExportacion.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\flore\\Downloads\\ingresantetp\\FormExportacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FormExportacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\flore\\Downloads\\ingresantetp\\Curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\flore\\Downloads\\ingresantetp\\Funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormExportacion.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\flore\\Downloads\\ingresantetp\\FormExportacion.Designer.cs",
+              "RelativeDocumentMoniker": "FormExportacion.Designer.cs",
+              "ToolTip": "C:\\Users\\flore\\Downloads\\ingresantetp\\FormExportacion.Designer.cs",
+              "RelativeToolTip": "FormExportacion.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T14:10:01.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormExportacion.cs",
+              "DocumentMoniker": "C:\\Users\\flore\\Downloads\\ingresantetp\\FormExportacion.cs",
+              "RelativeDocumentMoniker": "FormExportacion.cs",
+              "ToolTip": "C:\\Users\\flore\\Downloads\\ingresantetp\\FormExportacion.cs",
+              "RelativeToolTip": "FormExportacion.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T14:06:41.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Curso.cs",
+              "DocumentMoniker": "C:\\Users\\flore\\Downloads\\ingresantetp\\Curso.cs",
+              "RelativeDocumentMoniker": "Curso.cs",
+              "ToolTip": "C:\\Users\\flore\\Downloads\\ingresantetp\\Curso.cs",
+              "RelativeToolTip": "Curso.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T13:46:20.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Funciones.cs",
+              "DocumentMoniker": "C:\\Users\\flore\\Downloads\\ingresantetp\\Funciones.cs",
+              "RelativeDocumentMoniker": "Funciones.cs",
+              "ToolTip": "C:\\Users\\flore\\Downloads\\ingresantetp\\Funciones.cs",
+              "RelativeToolTip": "Funciones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T13:34:33.584Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

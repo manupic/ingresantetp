@@ -34,3 +34,22 @@ C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windo
 C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windows\PracticaForm.FormMDI.resources
 C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windows\PracticaForm.sourcelink.json
 C:\Users\Emanuel\Desktop\Manu\Programacion 3\PracticaForm\obj\Debug\net6.0-windows\PracticaForm.FormExportacion.resources
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.dll
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\refint\PracticaForm.dll
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.pdb
+C:\Users\flore\Downloads\ingresantetp\bin\Debug\net6.0-windows\PracticaForm.exe
+C:\Users\flore\Downloads\ingresantetp\bin\Debug\net6.0-windows\PracticaForm.deps.json
+C:\Users\flore\Downloads\ingresantetp\bin\Debug\net6.0-windows\PracticaForm.runtimeconfig.json
+C:\Users\flore\Downloads\ingresantetp\bin\Debug\net6.0-windows\PracticaForm.dll
+C:\Users\flore\Downloads\ingresantetp\bin\Debug\net6.0-windows\PracticaForm.pdb
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.Form1.resources
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.FormExportacion.resources
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.FormMDI.resources
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.csproj.GenerateResource.cache
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.AssemblyInfoInputs.cache
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.AssemblyInfo.cs
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.csproj.CoreCompileInputs.cache
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.sourcelink.json
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\PracticaForm.genruntimeconfig.cache
+C:\Users\flore\Downloads\ingresantetp\obj\Debug\net6.0-windows\ref\PracticaForm.dll

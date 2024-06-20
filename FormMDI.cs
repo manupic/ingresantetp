@@ -23,9 +23,6 @@ namespace PracticaForm
             f.MdiParent = this;
             f.Text = "Form - " + this.MdiChildren.Length.ToString();
             f.Show();
-
-
-
         }
 
         private void exportarXMLToolStripMenuItem_Click(object sender, EventArgs e)

@@ -15,7 +15,6 @@ namespace PracticaForm
        <param name="cuit">El CUIT como String sin guiones</param>
        <returns>El valor del dígito verificador calculado.</returns>
        */
-
         private static int CalcularDigitoCuit(string cuit)
         {
             int[] mult = new[] { 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 };
@@ -79,17 +78,11 @@ namespace PracticaForm
             {
                 return false;
             }
-            // MessageBox.Show(actual, mensaje, "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            // MessageBox.Show ("Do you want to exit?", "My Application",  MessageBoxButtons.YesNo, MessageBoxIcon.Question)  
         }
 
         public static void mAdvertencia(Form actual, string mensaje)
         {
             MessageBox.Show(actual, mensaje, "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
-
-
-
-
     }
 }

@@ -75,6 +75,7 @@
             // 
             // btn_exportar
             // 
+            btn_exportar.Enabled = false;
             btn_exportar.Location = new Point(196, 285);
             btn_exportar.Name = "btn_exportar";
             btn_exportar.Size = new Size(75, 23);
@@ -116,6 +117,7 @@
             rbJson.TabStop = true;
             rbJson.Text = "JSON";
             rbJson.UseVisualStyleBackColor = true;
+            rbJson.CheckedChanged += rbJson_CheckedChanged;
             // 
             // rbXml
             // 
@@ -127,6 +129,7 @@
             rbXml.TabStop = true;
             rbXml.Text = "XML";
             rbXml.UseVisualStyleBackColor = true;
+            rbXml.CheckedChanged += rbXml_CheckedChanged;
             // 
             // FormExportacion
             // 

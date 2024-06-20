@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -14,7 +15,6 @@ namespace PracticaForm
         string nombre;
         ArrayList lista_ingresantes = new ArrayList();
 
-
         public Curso() { }
 
         public Curso(string nombre)
@@ -24,29 +24,41 @@ namespace PracticaForm
 
         public string Nombre { get => nombre; set => nombre = value; }
 
-        public void saveIngresante(Ingresante ingresante)
+        public void guardarIngresanteEnTxt(Ingresante ingresante)
         {
             // Obtener la ruta de la carpeta Descargas del usuario
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-            string filePath = Path.Combine(downloadsPath, this.nombre+".txt");
+            string filePath = Path.Combine(downloadsPath, this.nombre + ".txt");
 
-            // Verificar si el archivo existe
+            // Verificar si el archivo existe. 
+            // Si no existe lo creamos y guardamos el ingresante
             if (!File.Exists(filePath))
             {
-                // Si el archivo no existe, agregar el ingresante
-                File.WriteAllText(filePath, formatoIngresante(ingresante));
+                // Si el archivo no existe, agregar el ingresante                
+                StreamWriter writer = null;
+                try
+                {
+                    writer = new StreamWriter(filePath, true);
+                    writer.WriteLine(formatoIngresante(ingresante));
+                }
+                catch (Exception e)
+                {
+                    Console.Write(e.ToString());
+                }
+                finally
+                {
+                    if (writer != null)
+                    {
+                        writer.Close();
+                        writer.Dispose();
+                    }
+                }
             }
             else
             {
-                // using garantiza que se elimina la variable writer al final del ámbito en el que se utiliza. 
-                // agrega el ingresante al archivo
-                agregarAlCurso(filePath, ingresante);
-                
-                /*using (StreamWriter writer = File.AppendText(filePath))
-                {
-                    writer.WriteLine(formatoIngresante(ingresante));
-                }*/
-            }            
+                // Si existe el archivo
+                agregarIngresanteAlCurso(filePath, ingresante);
+            }
         }
 
         public string formatoIngresante(Ingresante ingresante)
@@ -61,15 +73,15 @@ namespace PracticaForm
             return sb.ToString();
         }
 
-        public void agregarAlCurso(string path, Ingresante ingresante)
+        public void agregarIngresanteAlCurso(string path, Ingresante ingresante)
         {
             // Leemos todas las líneas del archivo y las guardamos en un arreglo de cadenas
             string[] lista_ingresantes = File.ReadAllLines(path);
 
-            if(lista_ingresantes.Length < 40)
-            {            
+            if (lista_ingresantes.Length < 40)
+            {
                 // Inicializamos una variable booleana para indicar si el ingresante ya existe en el archivo
-                bool ingresanteExiste = false;                
+                bool ingresanteExiste = false;
 
                 // Recorremos cada registro en el archivo
                 foreach (string registro in lista_ingresantes)
@@ -81,44 +93,46 @@ namespace PracticaForm
                     string cuit = partes[1];
 
                     // Comparamos el DNI con el Cuit del ingresante
-                    if (ingresante.Cuit.Replace("-","") == cuit)
+                    if (ingresante.Cuit.Replace("-", "") == cuit)
                     {
                         // Si el Cuit ya existe en el archivo, seteamos la variable existe a true
                         ingresanteExiste = true;
                         string message_error = "El ingresante con CUIT " + ingresante.Cuit + " ya existe en el curso: " + this.Nombre;
-                        MessageBox.Show(message_error, "Error: Ingresante Duplicado", MessageBoxButtons.OK);
+                        MessageBox.Show(message_error, "Error: Ingresante Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         break;
-                    }                                                                
-                    
+                    }
                 }
 
                 // Si el Cuit no existe en el archivo, agregamos el nuevo ingresante
                 if (!ingresanteExiste)
                 {
-                    // Abrimos el archivo en modo de agregar texto
-                    using (StreamWriter writer = File.AppendText(path))
+                    StreamWriter writer = null;
+                    try
                     {
-                        // Escribimos el nuevo registro en el archivo
-
-                        try
+                        writer = new StreamWriter(path, true);
+                        writer.WriteLine(formatoIngresante(ingresante));
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Write(e.ToString());
+                    }
+                    finally
+                    {
+                        if (writer != null)
                         {
-                            writer.WriteLine(formatoIngresante(ingresante));
-                        }                        
-                        catch (Exception e)
-                        {
-                            Console.Write(e.ToString());
+                            writer.Close();
+                            writer.Dispose();
                         }
                     }
-                    
-                }                
+                }
             }
             else
             {
-                MessageBox.Show("Hay 40 o más registros para este curso");
+                MessageBox.Show("No se puede registrar el ingresante porque hay más de 40 personas para este curso.", "ERROR: Exceso de registros", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
-        public void cargarInfo(Form actual)
+        public void cargarInfoAlArrayIngresantes(Form actual)
         {
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
             string filePath = Path.Combine(downloadsPath, this.nombre + ".txt");
@@ -130,23 +144,27 @@ namespace PracticaForm
                 {
                     string[] ingresantes = File.ReadAllLines(filePath);
 
-                    foreach(string registro in ingresantes){
+                    // Agrega cada ingresante del txt al array
+                    foreach (string registro in ingresantes)
+                    {
                         string[] partes = registro.Split('|');
                         Ingresante ingresante = new Ingresante(partes[0], partes[1], partes[2], Convert.ToInt32(partes[3]), partes[4], partes[5]);
-                        this.lista_ingresantes.Add(ingresante);
+                        lista_ingresantes.Add(ingresante);
                     }
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     Funciones.mError(actual, ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Archivo no encontrado");
+                // Arroja el error y finaliza la ejecución
+                throw new Exception("Archivo no encontrado.");
             }
         }
 
-        public void exportarInfoXML()            
+        public void exportarInfoXML()
         {
             string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
             string filePath = Path.Combine(downloadsPath, this.nombre + ".xml");
@@ -155,24 +173,27 @@ namespace PracticaForm
 
             try
             {
-                streamWriter = new StreamWriter(filePath);
+                // Crea un objeto StreamWriter que escribe el archivo ubicado en la ruta especificada
+                streamWriter = new StreamWriter(filePath, true);
+                // Crea un objeto XmlSerializer que se utiliza para serializar objetos de tipo Ingresante a XML.
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(Ingresante));
 
-
+                MessageBox.Show("Exportando archivo", "EXPORTANDO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 foreach (Ingresante ingresante in this.lista_ingresantes)
                 {
+                    // Serializa cada objeto a XML
                     xmlSerializer.Serialize(streamWriter, ingresante);
                 }
+                MessageBox.Show("Exportación exitosa", "EXPORTANDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
-                if(streamWriter != null)
+                if (streamWriter != null)
                 {
                     streamWriter.Close();
                     streamWriter.Dispose();
                 }
             }
-                        
         }
 
         public void exportarInfoJSON()
@@ -182,16 +203,18 @@ namespace PracticaForm
 
             StreamWriter streamWriter = null;
 
-
             try
             {
-                streamWriter = new StreamWriter(filePath, true);                
+                // Crea un objeto StreamWriter que escribe el archivo ubicado en la ruta especificada
+                streamWriter = new StreamWriter(filePath, true);
 
+                MessageBox.Show("Exportando archivo", "EXPORTANDO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 foreach (Ingresante ingresante in this.lista_ingresantes)
                 {
-                    string jsonString = JsonSerializer.Serialize(ingresante);                                        
+                    string jsonString = JsonSerializer.Serialize(ingresante);
                     streamWriter.WriteLine(jsonString);
                 }
+                MessageBox.Show("Exportación exitosa", "EXPORTANDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {

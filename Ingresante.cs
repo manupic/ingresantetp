@@ -47,6 +47,7 @@ namespace PracticaForm
             this.Direccion = direccion;
         }
 
+        // Muestra en pantalla los datos ingresados
         public override String ToString()
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -60,17 +61,9 @@ namespace PracticaForm
             return stringBuilder.ToString();
         }
 
+        // Muestra en pantalla los cursos seleccionados
         public String ToStringCursos() {
             return "Los cursos seleccionados son: \n" + curso[0] + "\n" + curso[1] + "\n" + curso[2];
         }
-
-
-        public void Guardar()
-        {
-            //guardar en archivo 
-            Console.WriteLine("ASDASD");
-        }
-
-
     }
 }
