@@ -114,7 +114,7 @@ namespace PracticaForm
                     }
                     catch (Exception e)
                     {
-                        Console.Write(e.ToString());
+                        MessageBox.Show("Error al guardar el ingresante: " + e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                     finally
                     {
@@ -186,6 +186,10 @@ namespace PracticaForm
                 }
                 MessageBox.Show("Exportación exitosa", "EXPORTANDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error al intentar exportar: " + ex.Message,"ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
             finally
             {
                 if (streamWriter != null)
@@ -209,12 +213,26 @@ namespace PracticaForm
                 streamWriter = new StreamWriter(filePath, true);
 
                 MessageBox.Show("Exportando archivo", "EXPORTANDO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                StringBuilder jsonStringBuilder = new StringBuilder();
+                jsonStringBuilder.Append("[");
+
                 foreach (Ingresante ingresante in this.lista_ingresantes)
                 {
                     string jsonString = JsonSerializer.Serialize(ingresante);
-                    streamWriter.WriteLine(jsonString);
+                    jsonStringBuilder.Append(jsonString);
+                    jsonStringBuilder.Append(",");
                 }
+
+                jsonStringBuilder.Length -= 1; // remover la última coma
+                jsonStringBuilder.Append("]");
+
+                string jsonString2 = jsonStringBuilder.ToString();
+                streamWriter.WriteLine(jsonString2);
                 MessageBox.Show("Exportación exitosa", "EXPORTANDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar exportar: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             finally
             {
